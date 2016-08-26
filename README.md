@@ -1,5 +1,5 @@
 # innate2adaptive / Decombinator Test Data
-## v3.1
+## v1.1
 ##### Innate2Adaptive lab @ University College London, 2016
 
 --- 
