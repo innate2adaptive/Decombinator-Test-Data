@@ -4,7 +4,9 @@
 
 --- 
 
-This repository hosts a small sample of TCR data as produced using the Innate2adaptive lab's ligation-mediated 5'RACE amplification protoco. This should allow users to test whether their Decombinator installation is installed and running correctly, and get a feel for how the scripts can be run.
+This repository hosts a small sample of TCR data as produced using the Innate2adaptive lab's ligation-mediated 5'RACE amplification protocol. This should allow users to test whether their Decombinator installation is installed and running correctly, and get a feel for how the scripts can be run.
+
+**Please note** that this data was produced by experiments using outdated I8 oligonucleotides. The Collapsinator script expects as default the M13 oligo currently used by the Innate2Adaptive group (UCL). Therefore an additional input user argument  - `-ol I8` - is required, when running Collapsinator for this test data set (otherwise output files will be empty). This additional argument is included in the instructions below. 
 
 ---
 
@@ -27,7 +29,7 @@ python Demultiplexor.py -r1 R1.fastq.gz -r2 R2.fastq.gz -i1 I1.fastq.gz -ix Inde
 for f in *fq*; do echo $f; python Decombinator.py -fq $f; done
 
 # Error-correct the n12 files produced by Decombinator
-for f in *n12*; do echo $f; python Collapsinator.py -in $f; done
+for f in *n12*; do echo $f; python Collapsinator.py -in $f -ol I8; done
 
 # Finally, translate the error-correct freq files and extract their CDR3s
 for f in *freq*; do echo $f; python CDR3translator.py -in $f; done
