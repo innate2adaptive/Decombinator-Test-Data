@@ -13,7 +13,7 @@ This repository hosts a small sample of TCR data as produced using the Innate2ad
 
 ---
 
-These data should no longer than about one minute or so to process on any standard PC or laptop, with the Demultiplexing taking the longest.
+These data should take no longer than about 10 seconds or so to process on any standard PC or laptop, with the Demultiplexing taking the longest.
 However it should be noted that these files are far smaller than what one might typically expect of an actual run.
 Here one hundred reads in total are provided.
 We typically multiplex six samples (with separate alpha/betas) over a MiSeq run, and therefore process just over 1 million reads per chain per sample.
